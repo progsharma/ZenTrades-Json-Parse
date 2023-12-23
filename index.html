@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Product Import</h1>
+    </header>
+    <main>
+      <section class="import-section">
+        <h2>Import Products</h2>
+        <div class="input-container">
+          <input type="file" id="jsonDataFile" accept=".json">
+          <button onclick="importDataFromFile()">Import</button>
+        </div>
+      </section>
+      <section class="display-options">
+        <h2>Display Handling</h2>
+        <div class="fields-container">
+          <div class="fields-lists">
+            <select multiple id="availableFields" class="fields-list"></select>
+            <div class="fields-controls">
+              <button onclick="moveToDisplayed()">>></button>
+              <button onclick="moveToAvailable()">&lt;&lt;</button>
+            </div>
+            <select multiple id="displayedFields" class="fields-list"></select>
+          </div>
+        </div>
+      </section>
+      <section class="data-display">
+        <h2>Please click on import Data to show the filtered data</h2>
+        <h2>Imported Data</h2>
+        <div id="dataTable" class="table-container">
+          <!-- Data will be displayed here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
